@@ -13,7 +13,7 @@ def analyze_salaries(names, salaries):
     for name, salary in zip(names, salaries):
         total_salary += salary
 
-        # Local function to check if an employee is underpaid (using lambda for brevity)
+        # Lambda function to check if an employee is underpaid
         is_underpaid = lambda s: s < MIN_SALARY
 
         if is_underpaid(salary):
@@ -21,11 +21,8 @@ def analyze_salaries(names, salaries):
 
     # Calculate average salary
     average_salary = total_salary / len(salaries)
-
-    # Returning multiple values as a tuple
     return average_salary, underpaid_employees
 
-# Sample employee data (can be replaced with actual data retrieval)
 employee_names = ["John", "Ishu", "Lakshay", "Avi"]
 employee_salaries = [55000, 45000, 90000, 48000]
 
