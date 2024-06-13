@@ -1,5 +1,7 @@
 import tkinter as tk
 
+#program to get the input entered in the text box and save it in a variable
+
 window = tk.Tk()
 window.title("TextBox") 
 window.geometry('400x200')
