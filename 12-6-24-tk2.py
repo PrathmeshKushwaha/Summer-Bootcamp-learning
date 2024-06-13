@@ -1,10 +1,20 @@
-from tkinter import *
+import tkinter as tk
 
-win = TK()
-win.geometry("700x250")
+window = tk.Tk()
+window.title("TextBox") 
+window.geometry('400x200')
 
-def open_text():
-   text_file = open("test.txt", "r")
-   content = text_file.read()
-   my_text_box.insert(END, content)
-   text_file.close()
+inputtxt = tk.Text(window, height = 5, width = 20) 
+inputtxt.pack()
+
+def printInput(): 
+    inp = inputtxt.get(1.0, "end-1c") 
+    lbl.config(text = "Provided Input: "+inp)
+
+printButton = tk.Button(window, text = "Print", command = printInput) 
+printButton.pack()
+
+lbl = tk.Label(window, text = "") 
+lbl.pack() 
+
+window.mainloop()
