@@ -6,13 +6,13 @@ cursor = sqliteConnection.cursor()
 
 print("Connected to the database")
 
-# sql_command = """CREATE TABLE emp ( 
-# staff_number INTEGER PRIMARY KEY, 
-# fname VARCHAR(20), 
-# lname VARCHAR(30), 
-# gender CHAR(1), 
-# joining DATE);"""
-# cursor.execute(sql_command)
+sql_command = """CREATE TABLE emp ( 
+staff_number INTEGER PRIMARY KEY, 
+fname VARCHAR(20), 
+lname VARCHAR(30), 
+gender CHAR(1), 
+joining DATE);"""
+cursor.execute(sql_command)
 
 # primary key
 pk = [2, 3, 4, 5, 6]
